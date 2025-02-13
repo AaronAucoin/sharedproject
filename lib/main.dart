@@ -137,7 +137,7 @@ class bluepill extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const bluepill3()), 
                                   );
                 },
-                child: const Text('Music I make'),
+                child: const Text('Oreo'),
               ),
             ),
             Padding(
@@ -148,7 +148,7 @@ class bluepill extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const bluepill4()), 
                                   );
                 },
-                child: const Text('Oreo'),
+                child: const Text('Music I make'),
               ),
             )
           ],

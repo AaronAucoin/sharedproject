@@ -455,7 +455,12 @@ class catcatcat extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
+          children: [
+            Image.network(
+                "https://pbs.twimg.com/media/FoqXk4SacAAJY55.jpg:large",
+                width: 500,
+                height: 500)
+          ],
         ),
       ),
     );

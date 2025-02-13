@@ -1,40 +1,380 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(home: HomeScreen()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
-  // This widget is the root of your application.
+  Future<void> _navigateAndDisplaySelection(BuildContext context) async {
+    // Navigator.push returns a Future that completes after calling
+    // Navigator.pop on the Selection Screen.
+    final result = await Navigator.push(
+      context,
+      // Create the SelectionScreen in the next step.
+      MaterialPageRoute(builder: (context) => const SelectionScreen()),
+    );
+    print(result);
+  }
+    Future<void> _bluepill(BuildContext context) async {
+    // Navigator.push returns a Future that completes after calling
+    // Navigator.pop on the Selection Screen.
+    final result = await Navigator.push(
+      context,
+      // Create the SelectionScreen in the next step.
+      MaterialPageRoute(builder: (context) => const bluepill()),
+    );
+
+    print(result);
+  }
+
+      Future<void> _bluepillOP2(BuildContext context) async {
+    // Navigator.push returns a Future that completes after calling
+    // Navigator.pop on the Selection Screen.
+    final result = await Navigator.push(
+      context,
+      // Create the SelectionScreen in the next step.
+      MaterialPageRoute(builder: (context) => const bluepill2()),
+    );
+
+    print(result);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('AaronWuzHere JuliaWuzHere MatthewBalachowskiWuZzHere'),),
       ),
-      home: const MyHomePage(title: 'AaronWuzHere JuliaWuzHere MatthewBalachowskiWuZzHere'),
+       backgroundColor: Colors.blueGrey,
+      // Create the SelectionButton widget in the next step.
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Text(""),
+              ElevatedButton(
+                  onPressed: () {
+                     Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const redpill1()), 
+                                      );
+                  },
+                  child: Text("The other two peoples pages")),
+           Text(""),
+                  ElevatedButton(
+                  onPressed: () {
+                    _bluepill(context);
+                  },
+                  child: Text("Matthews drip and cool pages all about himself"))
+            ],
+          ),
+        ),
+        
+      ),
     );
   }
 }
+
+class SelectionScreen extends StatelessWidget {
+  const SelectionScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('You picked the red pill')),
+      ),
+       backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context, 'Yep!');
+                },
+                child: const Text('Yep!'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Pop here with "Nope"...
+                },
+                child: const Text('Nope.'),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+class bluepill extends StatelessWidget {
+  const bluepill({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Good choice my friend you are now EPIC, What do you want to know about me?')),
+      ),
+       backgroundColor: Colors.blue,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const bluepill3()), 
+                                  );
+                },
+                child: const Text('Music I make'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                     Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const bluepill4()), 
+                                  );
+                },
+                child: const Text('Oreo'),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+class bluepill1 extends StatelessWidget {
+  const bluepill1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('RED OR BLACK? FRED LOVES TO GAMBLE')),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const bluepill3()), 
+                  );
+                },
+                child: const Text('RED'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Pop here with "Nope"...
+                },
+                child: const Text('BLACK'),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+class bluepill2 extends StatelessWidget {
+  const bluepill2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('You picked the blue pill')),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context, 'Yep!');
+                },
+                child: const Text('Yep!'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Pop here with "Nope"...
+                },
+                child: const Text('Nope.'),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class bluepill3 extends StatelessWidget {
+  const bluepill3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('OREOOO MY DAWG')),
+      ),
+       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class bluepill4 extends StatelessWidget {
+  const bluepill4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Music I Make')),
+      ),
+       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           Image.network('https://i.scdn.co/image/ab6761610000e5eb5eb2b885434e78d687bc9009'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class redpill1 extends StatelessWidget {
+  const redpill1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Chiefs or Eagles?')),
+      ),
+       backgroundColor: Colors.red,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const redpillyes()), 
+                  );
+                },
+                child: const Text('chiefs'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(
+                onPressed: () {
+                                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const redpillno()), 
+                  );
+                  // Pop here with "Nope"...
+                },
+                child: const Text('eagles (obviously lying to yourself)'),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class redpillyes extends StatelessWidget {
+  const redpillyes({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Pack your bags and leave my man')),
+      ),
+       backgroundColor: Colors.yellow,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           
+          ],
+        ),
+      ),
+    );
+  }
+}
+class redpillno extends StatelessWidget {
+  const redpillno({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('obviously Fred isnt here, Fred does not show himself to liars!')),
+      ),
+       backgroundColor: Colors.green,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+                      Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             children: [
+             
+                        
+                
+
+                
+               
+             ],
+           ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

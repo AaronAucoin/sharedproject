@@ -338,7 +338,7 @@ class redpill1 extends StatelessWidget {
       appBar: AppBar(
         title: Center(
             child: const Text(
-                'Aaron IS CooL but JuliA IS CooleR BuT ShE iS NoT ReaLLY ;)')),
+                'Aaron IS CooL but JuliA IS CooleR BuT ShE iS NoT ReaLLY :)')),
       ),
       backgroundColor: Colors.red,
       body: Center(

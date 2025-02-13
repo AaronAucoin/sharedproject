@@ -446,7 +446,14 @@ class redpillyes extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text("Here is a dawg")),
+            Image.network(
+                'https://i.scdn.co/image/ab67616d00001e02adec36a41ff23d8cfaee1079',
+                width: 250,
+                height: 250),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Here is the dawg"),
+            ),
           ],
         ),
       ),

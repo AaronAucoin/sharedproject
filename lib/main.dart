@@ -336,8 +336,9 @@ class redpill1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:
-            Center(child: const Text('Aaron IS CooL but JuliA IS CooleR ;)')),
+        title: Center(
+            child: const Text(
+                'Aaron IS CooL but JuliA IS CooleR BuT ShE iS NoT ReaLLY ;)')),
       ),
       backgroundColor: Colors.red,
       body: Center(
@@ -353,7 +354,58 @@ class redpill1 extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const redpillyes()),
                   );
                 },
-                child: const Text('Aaron'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(250, 100), // Bigger size
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20), // Rounded edges
+                  ),
+                  backgroundColor:
+                      Colors.transparent, // Transparent for gradient
+                  shadowColor: Colors.black.withOpacity(0.5),
+                  elevation: 10,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        // Colors.red,
+                        // Colors.orange,
+                        // Colors.yellow,
+                        // Colors.green,
+                        // Colors.blue,
+                        // Colors.purple,
+                        // Colors.pink,
+                        Colors.black,
+                        Colors.purple,
+                        Colors.pink,
+                        Colors.purple,
+                        Colors.black
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  child: const Text(
+                    'Aaron',
+                    style: TextStyle(
+                      fontSize: 32, // Bigger font
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      shadows: [
+                        Shadow(
+                          blurRadius: 5,
+                          color: Colors.black,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
             Padding(

@@ -355,7 +355,7 @@ class redpill1 extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(250, 100), // Bigger size
+                  minimumSize: const Size(700, 700), // Bigger size
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   shape: RoundedRectangleBorder(
@@ -381,6 +381,10 @@ class redpill1 extends StatelessWidget {
                         Colors.purple,
                         Colors.pink,
                         Colors.purple,
+                        Colors.black,
+                        Colors.purple,
+                        Colors.pink,
+                        Colors.purple,
                         Colors.black
                       ],
                       begin: Alignment.topLeft,
@@ -393,7 +397,7 @@ class redpill1 extends StatelessWidget {
                   child: const Text(
                     'Aaron',
                     style: TextStyle(
-                      fontSize: 32, // Bigger font
+                      fontSize: 256, // Bigger font
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       shadows: [
@@ -435,7 +439,7 @@ class redpillyes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Pack your bags and leave my man')),
+        title: Center(child: const Text("AARON IS COOL")),
       ),
       backgroundColor: Colors.yellow,
       body: Center(

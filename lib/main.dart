@@ -366,7 +366,7 @@ class redpill1 extends StatelessWidget {
                   );
                   // Pop here with "Nope"...
                 },
-                child: const Text("<-- Julia says don't click that one"),
+                child: const Text("<-- don't click that one"),
               ),
             )
           ],
@@ -405,16 +405,19 @@ class redpillno extends StatelessWidget {
       appBar: AppBar(
         title: Center(
             child: const Text(
-                'obviously Fred isnt here, Fred does not show himself to liars!')),
+                'Congratulations, you followed the instructions from the previous page')),
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: const Color.fromARGB(255, 219, 132, 235),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [],
+              children: [
+                Text("hello hello you have found Julia's page"),
+                Text("here is a picture of a dog")
+              ],
             ),
           ],
         ),

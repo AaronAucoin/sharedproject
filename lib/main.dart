@@ -404,8 +404,11 @@ class redpillno extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-            child: const Text(
-                'Congratulations, you followed the instructions from the previous page')),
+          child: const Text(
+            'Congratulations, you followed the instructions from the previous page',
+            textAlign: TextAlign.center,
+          ),
+        ),
       ),
       backgroundColor: const Color.fromARGB(255, 219, 132, 235),
       body: Center(
@@ -413,26 +416,35 @@ class redpillno extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text("hello hello you have found Julia's page"),
-                Text("here is a picture of a dog"),
+                SizedBox(height: 20),
+                Text("Here is a picture of a dog"),
+                SizedBox(height: 20),
                 Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHogmwi9hn7B3ksPsV8XZLFjeeawzePt4bNw&s',
-                    width: 250,
-                    height: 250),
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHogmwi9hn7B3ksPsV8XZLFjeeawzePt4bNw&s',
+                  width: 250,
+                  height: 250,
+                ),
+                SizedBox(height: 20),
                 Text(
-                    "but I'm really more of a cat person, so click the button for a cat picture"),
+                  "But I'm really more of a cat person, so click the button for a cat picture",
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 20),
                 ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const catcatcat()),
-                      );
-                      // Pop here with "Nope"...
-                    },
-                    child: Text("CAT PICTURE"))
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const catcatcat(),
+                      ),
+                    );
+                  },
+                  child: Text("CAT PICTURE"),
+                ),
               ],
             ),
           ],
@@ -458,8 +470,12 @@ class catcatcat extends StatelessWidget {
           children: [
             Image.network(
                 "https://pbs.twimg.com/media/FoqXk4SacAAJY55.jpg:large",
-                width: 500,
-                height: 500)
+                width: 600,
+                height: 600),
+            Text(
+              "I love programming!!!!!!!",
+              style: TextStyle(fontSize: 30),
+            )
           ],
         ),
       ),

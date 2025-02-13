@@ -416,10 +416,46 @@ class redpillno extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text("hello hello you have found Julia's page"),
-                Text("here is a picture of a dog")
+                Text("here is a picture of a dog"),
+                Image.network(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHogmwi9hn7B3ksPsV8XZLFjeeawzePt4bNw&s',
+                    width: 250,
+                    height: 250),
+                Text(
+                    "but I'm really more of a cat person, so click the button for a cat picture"),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const catcatcat()),
+                      );
+                      // Pop here with "Nope"...
+                    },
+                    child: Text("CAT PICTURE"))
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class catcatcat extends StatelessWidget {
+  const catcatcat({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('CAT')),
+      ),
+      backgroundColor: const Color.fromARGB(255, 219, 132, 235),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [],
         ),
       ),
     );

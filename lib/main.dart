@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
     );
     print(result);
   }
-    Future<void> _bluepill(BuildContext context) async {
+
+  Future<void> _bluepill(BuildContext context) async {
     // Navigator.push returns a Future that completes after calling
     // Navigator.pop on the Selection Screen.
     final result = await Navigator.push(
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
     print(result);
   }
 
-      Future<void> _bluepillOP2(BuildContext context) async {
+  Future<void> _bluepillOP2(BuildContext context) async {
     // Navigator.push returns a Future that completes after calling
     // Navigator.pop on the Selection Screen.
     final result = await Navigator.push(
@@ -45,12 +46,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('AaronWuzHere JuliaWuzHere MatthewBalachowskiWuZzHere'),),
+        title: Center(
+          child: const Text(
+              'AaronWuzHere JuliaWuzHere MatthewBalachowskiWuZzHere'),
+        ),
       ),
-       backgroundColor: const Color.fromARGB(255, 7, 115, 168),
+      backgroundColor: const Color.fromARGB(255, 7, 115, 168),
       // Create the SelectionButton widget in the next step.
       body: Center(
-        
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -59,13 +62,14 @@ class HomeScreen extends StatelessWidget {
               Text(""),
               ElevatedButton(
                   onPressed: () {
-                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const redpill1()), 
-                                      );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const redpill1()),
+                    );
                   },
                   child: Text("The other two peoples pages")),
-           Text(""),
-                  ElevatedButton(
+              Text(""),
+              ElevatedButton(
                   onPressed: () {
                     _bluepill(context);
                   },
@@ -73,7 +77,6 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        
       ),
     );
   }
@@ -88,7 +91,7 @@ class SelectionScreen extends StatelessWidget {
       appBar: AppBar(
         title: Center(child: const Text('You picked the red pill')),
       ),
-       backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,6 +120,7 @@ class SelectionScreen extends StatelessWidget {
     );
   }
 }
+
 class bluepill extends StatelessWidget {
   const bluepill({super.key});
 
@@ -124,9 +128,11 @@ class bluepill extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Good choice my friend you are now EPIC, What do you want to know about me?')),
+        title: Center(
+            child: const Text(
+                'Good choice my friend you are now EPIC, What do you want to know about me?')),
       ),
-       backgroundColor: Colors.blue,
+      backgroundColor: Colors.blue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -135,9 +141,10 @@ class bluepill extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: ElevatedButton(
                 onPressed: () {
-                                  Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const bluepill3()), 
-                                  );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const bluepill3()),
+                  );
                 },
                 child: const Text('Oreo'),
               ),
@@ -146,9 +153,10 @@ class bluepill extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: ElevatedButton(
                 onPressed: () {
-                     Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const bluepill4()), 
-                                  );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const bluepill4()),
+                  );
                 },
                 child: const Text('Music I make'),
               ),
@@ -159,6 +167,7 @@ class bluepill extends StatelessWidget {
     );
   }
 }
+
 class bluepill1 extends StatelessWidget {
   const bluepill1({super.key});
 
@@ -176,8 +185,9 @@ class bluepill1 extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const bluepill3()), 
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const bluepill3()),
                   );
                 },
                 child: const Text('RED'),
@@ -198,6 +208,7 @@ class bluepill1 extends StatelessWidget {
     );
   }
 }
+
 class bluepill2 extends StatelessWidget {
   const bluepill2({super.key});
 
@@ -240,39 +251,38 @@ class bluepill3 extends StatelessWidget {
   const bluepill3({super.key});
 
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: const Text('OREOOOO thats ma dawwgo - dog')),
-      ),
-       backgroundColor: const Color.fromARGB(255, 69, 11, 136),
-       
-      body: Center(
-              child: Column(
-        mainAxisAlignment: MainAxisAlignment.center, // Centers content vertically
-        children: [
-         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           Padding(
-             padding: const EdgeInsets.all(4.0),
-             child: Image.network('https://petlandleessummit.com/wp-content/uploads/2022/11/2502728_800-2-600x450.jpg', width:300, height:300),
-           ),
-                   
-        
-            
-          ],
-          
+        appBar: AppBar(
+          title: Center(child: const Text('OREOOOO thats ma dawwgo - dog')),
         ),
-         Padding(
-           padding: const EdgeInsets.all(96.0),
-           child: const Text('This is not my dog, its a random stock image off Google that looks like my dog.  Its a shih-poo and I love that dawg. This reminds me of him',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
-         ),
-            ]
-      ),
-      
-    )
-    );
+        backgroundColor: const Color.fromARGB(255, 69, 11, 136),
+        body: Center(
+          child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center, // Centers content vertically
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Image.network(
+                          'https://petlandleessummit.com/wp-content/uploads/2022/11/2502728_800-2-600x450.jpg',
+                          width: 300,
+                          height: 300),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(96.0),
+                  child: const Text(
+                    'This is not my dog, its a random stock image off Google that looks like my dog.  Its a shih-poo and I love that dawg. This reminds me of him',
+                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                  ),
+                ),
+              ]),
+        ));
   }
 }
 
@@ -282,38 +292,40 @@ class bluepill4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: const Text('Music I Make')),
-      ),
-       backgroundColor: const Color.fromARGB(255, 69, 11, 136),
-       
-      body: Center(
-              child: Column(
-        mainAxisAlignment: MainAxisAlignment.center, // Centers content vertically
-        children: [
-         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: Image.network('https://i.scdn.co/image/ab6761610000e5eb5eb2b885434e78d687bc9009', width:250, height:250),
-           ),
-                    Image.network('https://i.scdn.co/image/ab67616d00001e02adec36a41ff23d8cfaee1079', width:250, height:250),
-          
-        
-            
-          ],
-          
+        appBar: AppBar(
+          title: Center(child: const Text('Music I Make')),
         ),
-         Padding(
-           padding: const EdgeInsets.all(96.0),
-           child: const Text('Matthew has accoumulated a following of about 1,400 monthly listeners on spotify over the last 2 years of making music and has been growing at a slow but steady rate.  His biggest song reaching over 100k plays across all platforms and is constantly pushing to reach these numbers again.  He makes any type of music and you never know what you might get from him',style: TextStyle(color: Color.fromARGB(255, 254, 254, 254)),),
-         ),
-            ]
-      ),
-      
-    )
-    );
+        backgroundColor: const Color.fromARGB(255, 69, 11, 136),
+        body: Center(
+          child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center, // Centers content vertically
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.network(
+                          'https://i.scdn.co/image/ab6761610000e5eb5eb2b885434e78d687bc9009',
+                          width: 250,
+                          height: 250),
+                    ),
+                    Image.network(
+                        'https://i.scdn.co/image/ab67616d00001e02adec36a41ff23d8cfaee1079',
+                        width: 250,
+                        height: 250),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(96.0),
+                  child: const Text(
+                    'Matthew has accoumulated a following of about 1,400 monthly listeners on spotify over the last 2 years of making music and has been growing at a slow but steady rate.  His biggest song reaching over 100k plays across all platforms and is constantly pushing to reach these numbers again.  He makes any type of music and you never know what you might get from him',
+                    style: TextStyle(color: Color.fromARGB(255, 254, 254, 254)),
+                  ),
+                ),
+              ]),
+        ));
   }
 }
 
@@ -324,9 +336,10 @@ class redpill1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Aaron IS CooL')),
+        title:
+            Center(child: const Text('Aaron IS CooL but JuliA IS CooleR ;)')),
       ),
-       backgroundColor: Colors.red,
+      backgroundColor: Colors.red,
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -335,8 +348,9 @@ class redpill1 extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const redpillyes()), 
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const redpillyes()),
                   );
                 },
                 child: const Text('Aaron'),
@@ -346,12 +360,13 @@ class redpill1 extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: ElevatedButton(
                 onPressed: () {
-                                    Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const redpillno()), 
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const redpillno()),
                   );
                   // Pop here with "Nope"...
                 },
-                child: const Text('jUliA'),
+                child: const Text("<-- Julia says don't click that one"),
               ),
             )
           ],
@@ -370,18 +385,17 @@ class redpillyes extends StatelessWidget {
       appBar: AppBar(
         title: Center(child: const Text('Pack your bags and leave my man')),
       ),
-       backgroundColor: Colors.yellow,
+      backgroundColor: Colors.yellow,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           
-          ],
+          children: [],
         ),
       ),
     );
   }
 }
+
 class redpillno extends StatelessWidget {
   const redpillno({super.key});
 
@@ -389,31 +403,25 @@ class redpillno extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('obviously Fred isnt here, Fred does not show himself to liars!')),
+        title: Center(
+            child: const Text(
+                'obviously Fred isnt here, Fred does not show himself to liars!')),
       ),
-       backgroundColor: Colors.green,
+      backgroundColor: Colors.green,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-                      Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-             children: [
-             
-                        
-                
-
-                
-               
-             ],
-           ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

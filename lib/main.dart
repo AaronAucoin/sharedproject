@@ -47,12 +47,14 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Center(child: const Text('AaronWuzHere JuliaWuzHere MatthewBalachowskiWuZzHere'),),
       ),
-       backgroundColor: Colors.blueGrey,
+       backgroundColor: const Color.fromARGB(255, 7, 115, 168),
       // Create the SelectionButton widget in the next step.
       body: Center(
+        
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(""),
               ElevatedButton(
@@ -253,7 +255,7 @@ Widget build(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
            Padding(
-             padding: const EdgeInsets.all(8.0),
+             padding: const EdgeInsets.all(4.0),
              child: Image.network('https://petlandleessummit.com/wp-content/uploads/2022/11/2502728_800-2-600x450.jpg', width:300, height:300),
            ),
                    

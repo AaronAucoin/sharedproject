@@ -324,11 +324,11 @@ class redpill1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Chiefs or Eagles?')),
+        title: Center(child: const Text('Aaron IS CooL')),
       ),
        backgroundColor: Colors.red,
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -339,7 +339,7 @@ class redpill1 extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const redpillyes()), 
                   );
                 },
-                child: const Text('chiefs'),
+                child: const Text('Aaron'),
               ),
             ),
             Padding(
@@ -351,7 +351,7 @@ class redpill1 extends StatelessWidget {
                   );
                   // Pop here with "Nope"...
                 },
-                child: const Text('eagles (obviously lying to yourself)'),
+                child: const Text('jUliA'),
               ),
             )
           ],
